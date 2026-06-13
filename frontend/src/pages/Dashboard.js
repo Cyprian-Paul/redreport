@@ -45,7 +45,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-useEffect(() => { fetchReports(); }, [search, filterRisk, filterStatus, sort]);
+useEffect(() => { fetchReports(); }, [search, filterRisk, filterStatus, sort]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchReports = async () => {
     try {
