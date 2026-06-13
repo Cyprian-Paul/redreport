@@ -603,4 +603,4 @@ Packer.toBuffer(doc).then(buf=>{{ fs.writeFileSync(process.argv[2],buf); process
         headers={"Content-Disposition":f"attachment; filename=pentest-{safe}.docx"})
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=False)
