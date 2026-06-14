@@ -11,7 +11,7 @@ from datetime import timedelta
 from collections import defaultdict
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000"])
+CORS(app, origins=["http://localhost:3000", "https://redreport.vercel.app", "https://*.vercel.app"], supports_credentials=True)
 app.config["JWT_SECRET_KEY"] = "redreport-secret-2024"
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=24)
 app.config["UPLOAD_FOLDER"] = "uploads"
